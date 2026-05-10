@@ -1,6 +1,6 @@
 import BotaoTema from '../../Components/Botao-tema/botaoTema'
 import Menu from '../../Components/Menu/menu'
-import styles from '../Home/home.module.css'
+import styles from './home.module.css'
 import BarraPesquisa from '../../Components/Barra-pesquisa/barraPesquisa'
 import logo from '../../Images/logo.png'
 import Modal from '../../Components/Modal/modal'

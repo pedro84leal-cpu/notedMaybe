@@ -32,12 +32,13 @@
 
 .container {
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  padding: 5px;
-  z-index: -1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 5px;
+    height: 100vh;
+    overflow-y: auto;
 }
 
 .notinhas{
@@ -55,14 +56,15 @@
     gap: 10px
 }
 
-.grid2{
+.grid2 {
 
     margin-top: 10px;
     display: grid;
-    grid-template-rows: 1fr 1fr ;
-    width: 340px;
-    height: 340px;
-    gap: 30px
+    grid-template-rows: 1fr;
+    width: 100%;
+    max-width: 340px;
+    height: 160px;
+    gap: 30px;
 }
 
 .quadrado1
@@ -72,6 +74,7 @@
     border-radius: 20px;
     box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.306);
     display: flex;
+    padding: 5px;
     flex-direction: column;
     text-align: center;
 
@@ -86,6 +89,17 @@
     flex-direction: column;
     text-align: center;
 }
+
+.quadrado3 {
+
+    background: linear-gradient(to bottom, #001d0a, #aafddd);
+    border-radius: 20px;
+    box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.306);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 
 .diario {
 
@@ -117,6 +131,7 @@
 }
 
 .importante {
+     
     margin-top: 5px;
     font-size: 0.8rem;
     font-weight: 500;
@@ -151,15 +166,6 @@
 }
 
 
-.quadrado3{
-
-    background: linear-gradient(to bottom, #001d0a, #aafddd);
-    border-radius: 20px;
-    box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.306);
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
 
 
 .wallet {
