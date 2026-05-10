@@ -19,7 +19,7 @@
 
 .mascote {
 
-    width: 60px;
+    width: 40px;
     animation: bounce 1s infinite alternate;
 }
 
@@ -51,17 +51,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr ;
     width: 350px;
-    height: 220px;
+    height: 240px;
     gap: 10px
 }
 
 .grid2{
 
-    margin-top: 20px;
+    margin-top: 10px;
     display: grid;
     grid-template-rows: 1fr 1fr ;
     width: 350px;
-    height: 330px;
+    height: 350px;
     gap: 30px
 }
 
@@ -224,20 +224,21 @@
 
 
 .listaNotas {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .cartao {
 
+    
     background: rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 16px;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 5px;
     line-height: 1.4;
 }
 
