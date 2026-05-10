@@ -56,7 +56,6 @@ function NovaNota(){
       </div>
 
       <div className={styles.campo}>
-        <label htmlFor="data">Data</label>
         <input
           type="date"
           name="data"
@@ -70,7 +69,6 @@ function NovaNota(){
 
 
       <div className={styles.campo}>
-        <label htmlFor="hora">Hora</label>
         <input
           type="time"
           name="hora"

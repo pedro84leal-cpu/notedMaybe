@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100px;
+    height: 50px;
     bottom: 0;
     background-color: rgb(15, 115, 145);
     align-items: center;
@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 40px;
+    gap: 35px;
     text-align: center;
     text-decoration: none;
     
@@ -51,15 +51,15 @@
 
 .icone{
 
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
 }
 
 .iconeAdd{
 
-    width: 80px;
-    height: 80px;
-    transform: translateY(-20px) translateX(0px);
+    width: 50px;
+    height: 50px;
+    transform: translateY(-10px) translateX(0px);
     color: rgb(255, 193, 37);
     z-index: -1;
    
