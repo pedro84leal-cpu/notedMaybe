@@ -1,0 +1,52 @@
+.overlay {
+
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.631);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    animation: fadeIn 0.2s ease;
+}
+
+.modal {
+
+    background: rgb(5, 59, 74);
+    border-radius: 16px;
+    padding: 24px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    z-index: 101; 
+    overflow-y: auto;
+    animation: slideUp 0.25s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.fechar {
+
+    position: absolute;
+    top: 1px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: beige;
+}

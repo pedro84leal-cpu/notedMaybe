@@ -1,0 +1,66 @@
+.container{
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    background-color: rgb(15, 115, 145);
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 1px 1px 15px 5px rgba(238, 239, 240, 0.262);
+}
+
+.nav{
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+.link{
+
+    position: relative;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.linkAtivo{
+
+    color: rgb(61, 190, 210);
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.icone{
+
+    width: 30px;
+    height: 30px;
+}
+
+.iconeAdd{
+
+    width: 80px;
+    height: 80px;
+    transform: translateY(-20px) translateX(0px);
+    color: rgb(255, 193, 37);
+    z-index: -1;
+   
+}

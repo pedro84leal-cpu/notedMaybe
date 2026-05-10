@@ -1,0 +1,37 @@
+.toggle {
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.552);
+    border-radius: 999px;
+    padding: 4px;
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+}
+
+.icone {
+
+    font-size: 14px;
+    z-index: 1;
+    user-select: none;
+}
+
+.bolinha {
+
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: white;
+    left: 2px;
+    transition: left 0.3s ease;
+    z-index: 0;
+}
+
+.direita {
+    
+    left: 40px;
+}

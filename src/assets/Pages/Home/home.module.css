@@ -1,0 +1,255 @@
+.topo {
+
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 12px;
+    padding: 16px;
+}
+
+.semResultados {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 24px;
+    text-align: center;
+}
+
+.mascote {
+
+    width: 60px;
+    animation: bounce 1s infinite alternate;
+}
+
+
+@keyframes bounce {
+
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+.container {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 5px;
+  z-index: -1; 
+}
+
+.notinhas{
+
+    width: 100px;
+}
+
+.grid{
+
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    width: 390px;
+    height: 320px;
+    gap: 10px
+}
+
+.grid2{
+
+    margin-top: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    width: 390px;
+    height: 500px;
+    gap: 30px
+}
+
+.quadrado1
+{
+
+    background: linear-gradient(to bottom, #032d52, #b4e6fd);
+    border-radius: 20px;
+    box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.306);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.quadrado2{
+
+    background: linear-gradient(to bottom, #fad5ac9d, #fd9663);
+    border-radius: 20px;
+    box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.306);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.diario {
+
+    margin-top: 5px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #25a1ca;
+    position: relative;
+    display: inline-block;
+}
+
+.diario::after {
+
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #25a1ca, #340428);
+    animation: expandir 1s ease forwards;
+}
+
+@keyframes expandir {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+.importante {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #f31800;
+    position: relative;
+    display: inline-block;
+    animation: pulsar 2s ease-in-out infinite;
+}
+
+.importante::after {
+
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #e3ba14, #ff0101);
+    animation: expandir 1s ease forwards;
+}
+
+@keyframes expandir {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+@keyframes pulsar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+
+.quadrado3{
+
+    background: linear-gradient(to bottom, #001d0a, #aafddd);
+    border-radius: 20px;
+    box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.306);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.wallet {
+
+    margin-top: 5px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #2ecc71;
+    position: relative;
+    display: inline-block;
+}
+
+.wallet::after {
+
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #2ecc71, #f39c12);
+    animation: expandir 1s ease forwards;
+}
+
+
+@keyframes expandir {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+
+
+
+
+
+
+.botaoClaude {
+
+    background: #5203a2;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+
+
+
+.listaNotas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cartao {
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    line-height: 1.4;
+}
+
+.cartao h3 {
+
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.cartao p {
+
+    font-size: 0.85rem;
+    opacity: 0.7;
+}

@@ -1,0 +1,13 @@
+body {
+
+    background: linear-gradient(to bottom, #0d131b, #203c5fef, #42889f);
+    color: white;
+    min-height: 100vh;
+    transition: background 1s ease, color 1s ease;
+}
+
+body.claro {
+
+    background: linear-gradient(to bottom, #d4e5f3, #ffffff);
+    color: #1a1a2e;
+}
