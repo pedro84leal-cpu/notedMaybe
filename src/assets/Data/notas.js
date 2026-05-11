@@ -3,24 +3,24 @@
  
 const apontamentos = [
     {   id: 1, 
-        titulo: 'Compras',
+        titulo: 'Dentista',
         categoria: 'Pessoal', 
         conteudo: 'Leite, pão, ovos',
-        data: '26-01-2026',
-        importancia: 'alta' 
+        data: '2026-05-11',
+        importancia: 'média' 
     },
     {   id: 2, 
-        titulo: 'Compras',
+        titulo: 'Apresentação da consola Hub',
         categoria: 'Pessoal', 
         conteudo: ' pão, ovos',
-        data: '26-01-2026',
+        data: '2026-05-11',
         importancia: 'alta' 
     },
     {   id: 3, 
-        titulo: 'Compras',
+        titulo: 'Consulta do Gui',
         categoria: 'Pessoal', 
         conteudo: ' pão, ovos',
-        data: '26-01-2026',
+        data: '2026-05-11',
         importancia: 'alta' 
     },
     {   id: 4, 

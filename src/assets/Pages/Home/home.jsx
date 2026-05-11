@@ -5,6 +5,8 @@ import BarraPesquisa from '../../Components/Barra-pesquisa/barraPesquisa'
 import logo from '../../Images/logo.png'
 import Modal from '../../Components/Modal/modal'
 import logoApp from '../../Images/titulo_logo.png'
+import { LuClock } from 'react-icons/lu';
+import { BsFire } from 'react-icons/bs'; 
 
 
 
@@ -14,6 +16,10 @@ function Home({ temaEscuro, toggleTema, pesquisa, setPesquisa, notas = [] }){
         nota.titulo.toLowerCase().includes(pesquisa.toLowerCase()) ||
         nota.conteudo.toLowerCase().includes(pesquisa.toLowerCase())
     );
+
+    const hoje = new Date().toISOString().split('T')[0];
+    const notasHoje = notas.filter(nota => nota.data === hoje);
+    const notasImportantes = notas.filter(nota => nota.importancia === 'alta');
 
     return(
     <>
@@ -29,11 +35,21 @@ function Home({ temaEscuro, toggleTema, pesquisa, setPesquisa, notas = [] }){
                 <h3 className={styles.diario}>
                     Hoje
                 </h3>
+                <div className={styles.lista}>
+                {notasHoje.map(nota => (
+                    <p  key={nota.id}> <LuClock size={10} style={{color: '#110252'}} /> {nota.titulo}</p>
+                ))}
+                </div>
             </div>
             <div className={styles.quadrado2}>
                   <h3 className={styles.importante}>
                     Importante
                 </h3>
+                <div className={styles.lista}>
+                {notasImportantes.map(nota => (
+                    <p key={nota.id}> <BsFire size={10} style={{color: '#f7331d'}} /> {nota.titulo}</p>
+                ))}
+                </div>             
             </div>
         </div>
         <div className={styles.grid2}>
