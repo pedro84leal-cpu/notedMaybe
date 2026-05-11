@@ -10,7 +10,7 @@ const apontamentos = [
         importancia: 'média' 
     },
     {   id: 2, 
-        titulo: 'Apresentação da consola Hub',
+        titulo: 'Apresentação',
         categoria: 'Pessoal', 
         conteudo: ' pão, ovos',
         data: '2026-05-11',
@@ -21,14 +21,14 @@ const apontamentos = [
         categoria: 'Pessoal', 
         conteudo: ' pão, ovos',
         data: '2026-05-11',
-        importancia: 'alta' 
+        importancia: 'média' 
     },
     {   id: 4, 
         titulo: 'Compras',
         categoria: 'Pessoal', 
         conteudo: 'Leite, pão, ovos',
         data: '26-01-2026',
-        importancia: 'alta' 
+        importancia: 'baixa' 
     },
     {   id: 5, 
         titulo: 'Compras',
@@ -38,7 +38,7 @@ const apontamentos = [
         importancia: 'alta' 
     },
     {   id: 6, 
-        titulo: 'Compras',
+        titulo: 'Cortar cabelo',
         categoria: 'Pessoal', 
         conteudo: 'Leite, pão, ovos',
         data: '26-01-2026',

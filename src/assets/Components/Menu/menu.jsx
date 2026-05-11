@@ -28,7 +28,7 @@ function Menu(){
             </NavLink>
 
             <NavLink to='/agenda'  className={({ isActive }) => isActive ? styles.linkAtivo : styles.link}>
-                <LuCalendarDays className={styles.icone} />
+                <LuCalendarDays className={styles.iconeMidle} />
             </NavLink>
 
             <NavLink className={({ isActive }) => isActive ? styles.linkAtivo : styles.link} onClick={abrirForm}>
@@ -36,7 +36,7 @@ function Menu(){
             </NavLink>
 
             <NavLink to='/agenda'  className={({ isActive }) => isActive ? styles.linkAtivo : styles.link}>
-                <MdCategory className={styles.icone} />
+                <MdCategory className={styles.iconeMidle} />
             </NavLink>
 
          

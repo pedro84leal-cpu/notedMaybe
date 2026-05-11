@@ -19,7 +19,7 @@ body {
 body.claro {
 
     background: linear-gradient(to bottom, #d4e5f3, #ffffff);
-    color: #1a1a2e;
+    color: #080808;
     height: 100vh;
     overflow: hidden;
     --quadrado1: linear-gradient(to bottom, #e0e7ed, #c8d7ff); 
