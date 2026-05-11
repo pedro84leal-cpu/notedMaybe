@@ -4,10 +4,11 @@
     inset: 0;
     background: rgba(0, 0, 0, 0.631);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     z-index: 100;
     animation: fadeIn 0.2s ease;
+    overflow-y: auto;
 }
 
 .modal {
@@ -21,7 +22,10 @@
     z-index: 101; 
     overflow-y: auto;
     animation: slideUp 0.25s ease;
+    margin: 20px auto;
 }
+
+
 
 @keyframes fadeIn {
     from { opacity: 0; }

@@ -70,11 +70,10 @@
 .quadrado1
 {
 
-    background: linear-gradient(to bottom, #032d52, #b4e6fd);
+    background: var(--quadrado1);
     border-radius: 20px;
     box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.306);
     display: flex;
-    padding: 5px;
     flex-direction: column;
     text-align: center;
 
@@ -82,7 +81,7 @@
 
 .quadrado2{
 
-    background: linear-gradient(to bottom, #fad5ac9d, #fd9663);
+    background: var(--quadrado2);
     border-radius: 20px;
     box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.306);
     display: flex;
@@ -92,7 +91,7 @@
 
 .quadrado3 {
 
-    background: linear-gradient(to bottom, #001d0a, #aafddd);
+    background: var(--quadrado3);
     border-radius: 20px;
     box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.306);
     display: flex;

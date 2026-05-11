@@ -48,11 +48,13 @@ function NovaNota(){
 
       {/* Data e hora lado a lado */}
       <div className={styles.campoData}>
+        <label className={styles.label}>Data</label>
         <input
           type="date"
           value={data}
           onChange={(e) => setData(e.target.value)}
         />
+        <label className={styles.label}>Hora</label>
         <input
           type="time"
           value={hora}
