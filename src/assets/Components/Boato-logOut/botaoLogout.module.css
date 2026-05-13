@@ -1,0 +1,18 @@
+.content{
+
+    width: 90px;
+    height: 15px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.logOut{
+
+    text-decoration: none;
+    color: rgba(4, 91, 253, 0.462);
+    font-size: 0.8rem;
+}

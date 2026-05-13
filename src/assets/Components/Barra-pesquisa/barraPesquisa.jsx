@@ -1,5 +1,6 @@
 import styles from '../Barra-pesquisa/barraPsquisa.module.css';
 
+
 function BarraPesquisa({ pesquisa, setPesquisa }) {
   return (
     <input

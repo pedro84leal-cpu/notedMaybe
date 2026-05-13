@@ -9,6 +9,8 @@ import { LuClock } from 'react-icons/lu';
 import { BsFire } from 'react-icons/bs';
 import NotaSwipe from '../../Components/NotaSwipe/notaSwipe'
 import { supabase } from '../../Config/supabase'; 
+import BoatoIA from '../../Components/Botao-IA/boatoIA'
+import BotaoLogout from '../../Components/Boato-logOut/botaoLogout'
 
 
 
@@ -50,8 +52,12 @@ function Home({ temaEscuro, toggleTema, pesquisa, setPesquisa, notas = [], busca
     <>
     <Menu buscarNotas={buscarNotas} />
     <div className={styles.topo}>
-        <BarraPesquisa pesquisa={pesquisa} setPesquisa={setPesquisa} />
-        <BotaoTema temaEscuro={temaEscuro} toggleTema={toggleTema} />        
+        <BotaoLogout />                     
+    </div>
+    <div className={styles.topo1} >
+        <BarraPesquisa pesquisa={pesquisa} setPesquisa={setPesquisa} />     
+        <BoatoIA />
+        <BotaoTema temaEscuro={temaEscuro} toggleTema={toggleTema} />         
     </div>
     <div className={styles.container}>
         <img src={logoApp} alt="Notinhas" className={styles.notinhas} />
@@ -65,7 +71,7 @@ function Home({ temaEscuro, toggleTema, pesquisa, setPesquisa, notas = [], busca
                     <NotaSwipe
                     key={nota.id}
                     nota={nota}
-                    icone={<LuClock size={10} className={styles.icone} />}
+                    icone={<LuClock size={14} className={styles.icone} />}
                     onEliminar={eliminarNota}
                     onEditar={editarNota}
                     onValidar={validarNota}
@@ -82,7 +88,7 @@ function Home({ temaEscuro, toggleTema, pesquisa, setPesquisa, notas = [], busca
                     <NotaSwipe
                     key={nota.id}
                     nota={nota}
-                    icone={<BsFire size={10} style={{ color: '#f7331d' }} className={styles.icone} />}
+                    icone={<BsFire size={12} style={{ color: '#f7331d' }} className={styles.icone} />}
                     onEliminar={eliminarNota}
                     onEditar={editarNota}
                     onValidar={validarNota}

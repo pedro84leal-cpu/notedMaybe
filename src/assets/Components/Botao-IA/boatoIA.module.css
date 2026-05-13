@@ -1,0 +1,20 @@
+.button{
+
+    background-color: rgb(2, 59, 99);
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 1px 1px 8px 1px rgba(73, 132, 214, 0.561);
+    z-index: 10;
+    position: relative;
+    left: -25px;
+    width: 50px;
+    height: 35px;
+
+}
+
+.gemini{
+
+    color: azure;
+    width: 80%;
+    height: 80%;
+}
