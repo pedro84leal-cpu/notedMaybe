@@ -1,0 +1,75 @@
+.swipeContainer {
+
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    height: 32px; /* altura fixa */
+}
+
+.acoes {
+    
+    position: absolute;
+    right: -120px; 
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 8px;
+    z-index: 0;
+    transition: right 0.3s ease;
+
+
+}
+
+.nota {
+
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    padding: 4px 8px;
+    cursor: grab;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.8rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+
+.notaValidada {
+  opacity: 0.5;
+  text-decoration: line-through;
+  color: #033d1b;
+}
+
+.acoesAberto {
+
+    right: 0;
+}
+
+.validar, .editar, .eliminar {
+
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.validar {
+    color: rgb(11, 152, 68);
+}
+
+.editar {
+    color: #061d61;
+}
+
+.eliminar {
+    color: #2e2c2c;
+}

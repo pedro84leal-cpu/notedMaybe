@@ -6,11 +6,13 @@ import logo from '../../Images/logo.png'
 import Modal from '../../Components/Modal/modal'
 import logoApp from '../../Images/titulo_logo.png'
 import { LuClock } from 'react-icons/lu';
-import { BsFire } from 'react-icons/bs'; 
+import { BsFire } from 'react-icons/bs';
+import NotaSwipe from '../../Components/NotaSwipe/notaSwipe'
+import { supabase } from '../../Config/supabase'; 
 
 
 
-function Home({ temaEscuro, toggleTema, pesquisa, setPesquisa, notas = [] }){
+function Home({ temaEscuro, toggleTema, pesquisa, setPesquisa, notas = [], buscarNotas }){
 
     const notasFiltradas = notas.filter(nota =>
         nota.titulo.toLowerCase().includes(pesquisa.toLowerCase()) ||
@@ -21,9 +23,32 @@ function Home({ temaEscuro, toggleTema, pesquisa, setPesquisa, notas = [] }){
     const notasHoje = notas.filter(nota => nota.data === hoje);
     const notasImportantes = notas.filter(nota => nota.importancia === 'alta');
 
+    const eliminarNota = async (id) => {
+        const { error } = await supabase
+            .from('notas')
+            .delete()
+            .eq('id', id);
+
+        if (!error) buscarNotas();
+        };
+
+    const validarNota = async (id) => {
+        const { error } = await supabase
+        .from('notas')
+        .update({ validada: true, importancia: 'baixa'  })
+        .eq('id', id);
+
+        if (!error) buscarNotas();
+    };;
+
+    const editarNota = (id) => {
+        // por agora só um log — implementamos depois
+        console.log('editar nota:', id);
+    };
+
     return(
     <>
-    <Menu />
+    <Menu buscarNotas={buscarNotas} />
     <div className={styles.topo}>
         <BarraPesquisa pesquisa={pesquisa} setPesquisa={setPesquisa} />
         <BotaoTema temaEscuro={temaEscuro} toggleTema={toggleTema} />        
@@ -37,7 +62,14 @@ function Home({ temaEscuro, toggleTema, pesquisa, setPesquisa, notas = [] }){
                 </h3>
                 <div className={styles.lista}>
                 {notasHoje.map(nota => (
-                    <p  key={nota.id}> <LuClock size={10} style={{color: '#110252'}} /> {nota.titulo}</p>
+                    <NotaSwipe
+                    key={nota.id}
+                    nota={nota}
+                    icone={<LuClock size={10} className={styles.icone} />}
+                    onEliminar={eliminarNota}
+                    onEditar={editarNota}
+                    onValidar={validarNota}
+                    />
                 ))}
                 </div>
             </div>
@@ -47,20 +79,18 @@ function Home({ temaEscuro, toggleTema, pesquisa, setPesquisa, notas = [] }){
                 </h3>
                 <div className={styles.lista}>
                 {notasImportantes.map(nota => (
-                    <p key={nota.id}> <BsFire size={10} style={{color: '#f7331d'}} /> {nota.titulo}</p>
+                    <NotaSwipe
+                    key={nota.id}
+                    nota={nota}
+                    icone={<BsFire size={10} style={{ color: '#f7331d' }} className={styles.icone} />}
+                    onEliminar={eliminarNota}
+                    onEditar={editarNota}
+                    onValidar={validarNota}
+                    />
                 ))}
                 </div>             
             </div>
         </div>
-        <div className={styles.grid2}>
-            <div className={styles.quadrado3}>
-                <h3 className={styles.wallet}>
-                    Wallet
-                </h3>
-            </div>
-        </div>
-     
-
     </div> 
 
 

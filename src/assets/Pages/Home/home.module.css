@@ -51,21 +51,12 @@
 
     
     display: grid;
-    grid-template-columns: 1fr 1fr ;
-    width: 355px;
-    height: 270px;
+    grid-template-rows: 1fr 1fr ;
+    width: 350px;
+    height: 430px;
     gap: 10px
 }
 
-.grid2 {
-
-    display: grid;
-    grid-template-rows: 1fr;
-    width: 100%;
-    max-width: 355px;
-    height: 160px;
-    gap: 30px;
-}
 
 .quadrado1
 {
@@ -93,18 +84,6 @@
     font-size: 0.8rem;
 }
 
-.quadrado3 {
-
-    background: var(--quadrado3);
-    border-radius: 20px;
-    box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.306);
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-    
-}
-
 .lista{
 
     text-align: left;
@@ -112,6 +91,11 @@
     margin-left: 8px;
     font-size: 0.8rem;
 
+}
+
+.icone{
+
+    margin-right: 10px;
 }
 
 .diario {

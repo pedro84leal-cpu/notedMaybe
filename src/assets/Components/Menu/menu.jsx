@@ -1,8 +1,8 @@
 import styles from '../Menu/menu.module.css'
 import { NavLink } from 'react-router-dom'
-import { LuCalendarDays } from "react-icons/lu";
+import { FaCalendarAlt } from "react-icons/fa";
 import { TbHomeFilled } from "react-icons/tb";
-import { MdCategory } from "react-icons/md";
+import { FaWallet } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { IoMdAddCircle } from "react-icons/io";
 import Modal from '../Modal/modal';
@@ -11,7 +11,7 @@ import NovaNota from '../NovaNota/form';
 
 
 
-function Menu(){
+function Menu({ buscarNotas }){
 
     const [FormAberto, setFormAberto] = useState(false);
             
@@ -28,7 +28,7 @@ function Menu(){
             </NavLink>
 
             <NavLink to='/agenda'  className={({ isActive }) => isActive ? styles.linkAtivo : styles.link}>
-                <LuCalendarDays className={styles.iconeMidle} />
+                <FaCalendarAlt className={styles.iconeMidle} />
             </NavLink>
 
             <NavLink className={({ isActive }) => isActive ? styles.linkAtivo : styles.link} onClick={abrirForm}>
@@ -36,7 +36,7 @@ function Menu(){
             </NavLink>
 
             <NavLink to='/agenda'  className={({ isActive }) => isActive ? styles.linkAtivo : styles.link}>
-                <MdCategory className={styles.iconeMidle} />
+                <FaWallet  className={styles.iconeMidle} />
             </NavLink>
 
          
@@ -50,7 +50,7 @@ function Menu(){
 
             {FormAberto && (                                   
             <Modal onClose={() => setFormAberto(false)}>   
-                <NovaNota />
+                <NovaNota buscarNotas={buscarNotas} />
             </Modal>
         )}
     </div>

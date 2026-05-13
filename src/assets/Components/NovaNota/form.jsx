@@ -1,31 +1,66 @@
 import styles from './form.module.css'
 import { useState } from 'react'
-import titulo from '../../Images/titulo.png'
+import imagemTitulo from '../../Images/titulo.png'
+import { supabase } from '../../Config/supabase';
 
-function NovaNota(){
+function NovaNota({ buscarNotas }){
 
+  const [titulo, setTitulo] = useState('');
+  const [conteudo, setConteudo] = useState('');
   const [categoria, setcategoria] = useState('');
   const [importancia, setimportancia] = useState('');
   const [data, setData] = useState('');
   const [hora, setHora] = useState('');
   const [sucesso, setSucesso] = useState(false);
 
-  const enviar = () => {
-    setSucesso(true);
-    setTimeout(() => setSucesso(false), 3000);
-  }
+  const enviar = async () => {
+    const { error } = await supabase
+      .from('notas')
+      .insert([{
+        titulo,
+        conteudo,
+        categoria,
+        data,
+        importancia,
+        validada: false
+      }]);
+
+    if (error) {
+      console.error('Erro ao guardar nota:', error);
+    } else {
+      setSucesso(true);
+      buscarNotas();
+      setTimeout(() => setSucesso(false), 3000);
+      setTitulo('');
+      setConteudo('');
+      setcategoria('');
+      setData('');
+      setimportancia('');
+    }
+  };
 
   return (
     <div className={styles.card}>
-      <img src={titulo} alt="Notinhas" className={styles.tituloNotinhas} />
+      <img src={imagemTitulo} alt="Notinhas" className={styles.tituloNotinhas} />
       <h2 className={styles.titulo}>Nova nota</h2>
 
       <div className={styles.formGroup}>
-        <input type="text" placeholder="Titulo" className={styles.input} />
+        <input 
+          type="text" 
+          placeholder="Titulo" 
+          className={styles.input}
+          value={titulo}
+          onChange={(e) => setTitulo(e.target.value)}
+        />
       </div>
 
       <div className={styles.formGroup}>
-        <textarea placeholder="Apontamentos" className={styles.textarea} />
+        <textarea 
+          placeholder="Apontamentos" 
+          className={styles.textarea}
+          value={conteudo}
+          onChange={(e) => setConteudo(e.target.value)}
+        />
       </div>
 
       <div className={styles.campo}>
@@ -46,7 +81,6 @@ function NovaNota(){
         </select>
       </div>
 
-      {/* Data e hora lado a lado */}
       <div className={styles.campoData}>
         <label className={styles.label}>Data</label>
         <input
