@@ -1,8 +1,9 @@
 import styles from './registo.module.css'
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { supabase } from '../../Config/supabase';
 import logo from '../../Images/titulo_logo.png'
+import { IoReturnDownBack } from "react-icons/io5";
 
 function Registo() {
 
@@ -48,6 +49,10 @@ function Registo() {
     };
 
     return (
+        <>
+        <Link to='/' className={styles.linkVoltar}>
+            <IoReturnDownBack size={25} className={styles.iconeVoltar} />
+        </Link>
         <div className={`${styles.content} ${pageLoaded ? styles.fadeIn : ''}`}>
             <div className={styles.logoContent}>
                 <img src={logo} alt='Logo' className={styles.logo} />
@@ -93,6 +98,7 @@ function Registo() {
                 </div>
             )}
         </div>
+        </>
     );
 }
 

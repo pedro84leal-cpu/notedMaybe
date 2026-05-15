@@ -6,6 +6,11 @@ import { useState, useEffect, useCallback } from 'react';
 import { supabase } from './assets/Config/supabase';
 import Login from './assets/Pages/Login/login';
 import Registo from './assets/Pages/Registo/registo'
+import RotaProtegida from './assets/Components/RotaProtegida/RotaProtegida';
+import SplashScreen from './assets/Components/SplashScreen/SplashScreen'
+
+
+
 
 function App() {
 
@@ -34,19 +39,30 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<IntroPage onStart={() => navigate('/registo')}
-                                            onLogin={() => navigate('/login')}
-                                            onGuest={() => navigate('/home')} />} />
 
-        <Route path='/home' element={<Home  temaEscuro={temaEscuro} 
-                                            toggleTema={mudaTema}
-                                            pesquisa={pesquisa}
-                                            setPesquisa={setPesquisa}
-                                            notas={notas}
-                                            setNotas={setNotas}
-                                            buscarNotas={buscarNotas} />}/>
+        <Route path='/splash' element={<SplashScreen />} />
+        <Route path='/' element={<SplashScreen />} />
+
+        <Route path='/intro' element={
+          <IntroPage onStart={
+            () => navigate('/registo')}
+            onLogin={() => navigate('/login')} />
+          }
+        />
         
-        <Route path='/login' element={<Login />} />
+        <Route path='/home' element={
+          <RotaProtegida>
+            <Home  temaEscuro={temaEscuro} 
+              toggleTema={mudaTema}
+              pesquisa={pesquisa}
+              setPesquisa={setPesquisa}
+              notas={notas}
+              setNotas={setNotas}
+              buscarNotas={buscarNotas} />
+          </RotaProtegida>
+        }/>
+        
+        <Route path='/login' element={<Login /> } />
         <Route path='/registo' element={<Registo />} />
 
       </Routes>

@@ -13,7 +13,9 @@ function NovaNota({ buscarNotas }){
   const [hora, setHora] = useState('');
   const [sucesso, setSucesso] = useState(false);
 
-  const enviar = async () => {
+ const enviar = async () => {
+    const { data: { user } } = await supabase.auth.getUser();
+
     const { error } = await supabase
       .from('notas')
       .insert([{
@@ -22,7 +24,8 @@ function NovaNota({ buscarNotas }){
         categoria,
         data,
         importancia,
-        validada: false
+        validada: false,
+        user_id: user.id
       }]);
 
     if (error) {
@@ -37,7 +40,7 @@ function NovaNota({ buscarNotas }){
       setData('');
       setimportancia('');
     }
-  };
+};
 
   return (
     <div className={styles.card}>

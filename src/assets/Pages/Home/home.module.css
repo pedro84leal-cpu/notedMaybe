@@ -1,20 +1,14 @@
 .topo {
 
     display: flex;
-    align-items: end;
-    margin-top: 5px;
-    margin-left: 280px;
-    gap: 5px;
-    padding: 2px;
-}
-
-.topo1 {
-
-    display: flex;
     align-items: center;
-    margin-top: 2px;
-    padding: 8px;
+    flex-direction: row;
+    margin-top: 8px;
+    margin-left: 10px;
+    gap: 5px;
+    padding: 10px;
 }
+
 
 .semResultados {
 
@@ -62,7 +56,7 @@
     grid-template-rows: 1fr 1fr ;
     width: 350px;
     height: 400px;
-    gap: 10px
+    gap: 30px
 }
 
 

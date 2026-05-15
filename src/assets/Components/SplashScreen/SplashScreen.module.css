@@ -1,0 +1,205 @@
+/* ===== SPLASH SCREEN ===== */
+.splash {
+
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at center, #0a0f1e 0%, #000000 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+}
+
+.saida {
+
+    opacity: 0;
+}
+
+/* ===== PARTÍCULAS ===== */
+.particulas {
+
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.particula {
+
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: #C9A84C;
+    opacity: 0;
+    animation: flutuarParticula 4s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.3s);
+    left: calc(10% + var(--i) * 7%);
+    top: calc(20% + (var(--i) * 13%) - (var(--i) * var(--i) * 0.5%));
+}
+
+@keyframes flutuarParticula {
+    0%, 100% { opacity: 0; transform: translateY(0px) scale(1); }
+    25% { opacity: 0.6; }
+    50% { opacity: 0.3; transform: translateY(-30px) scale(1.5); }
+    75% { opacity: 0.6; }
+}
+
+/* ===== ANÉIS ORBITAIS ===== */
+.anel {
+
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    animation: rodarAnel linear infinite;
+    pointer-events: none;
+}
+
+.anel1 {
+
+    width: 320px;
+    height: 320px;
+    animation-duration: 8s;
+    border-color: rgba(201, 168, 76, 0.12);
+}
+
+.anel2 {
+
+    width: 420px;
+    height: 420px;
+    animation-duration: 12s;
+    animation-direction: reverse;
+    border-color: rgba(30, 80, 160, 0.15);
+}
+
+.anel3 {
+
+    width: 520px;
+    height: 520px;
+    animation-duration: 18s;
+    border-color: rgba(201, 168, 76, 0.08);
+}
+
+@keyframes rodarAnel {
+    from { transform: rotate(0deg) rotateX(70deg); }
+    to { transform: rotate(360deg) rotateX(70deg); }
+}
+
+/* ===== LOGO CONTAINER ===== */
+.logoContainer {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    opacity: 0;
+    transform: scale(0.85) translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.logoVisivel {
+
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* ===== BRILHO ===== */
+.brilho {
+
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201, 168, 76, 0.25) 0%, transparent 70%);
+    animation: pulsarBrilho 2s ease-in-out infinite;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+@keyframes pulsarBrilho {
+    0%, 100% {
+        transform: translate(-50%, -60%) scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(-50%, -60%) scale(1.3);
+        opacity: 1;
+    }
+}
+
+/* ===== LOGO ===== */
+.logo {
+
+    width: 320px;
+    max-width: 85vw;
+    object-fit: contain;
+    filter: drop-shadow(0 0 20px rgba(201, 168, 76, 0.4))
+            drop-shadow(0 0 60px rgba(201, 168, 76, 0.15));
+    animation: brilharLogo 2s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes brilharLogo {
+    0%, 100% {
+        filter: drop-shadow(0 0 20px rgba(201, 168, 76, 0.4))
+                drop-shadow(0 0 60px rgba(201, 168, 76, 0.15));
+    }
+    50% {
+        filter: drop-shadow(0 0 30px rgba(201, 168, 76, 0.7))
+                drop-shadow(0 0 80px rgba(201, 168, 76, 0.3));
+    }
+}
+
+/* ===== TAGLINE ===== */
+.tagline {
+
+    color: rgba(201, 168, 76, 0.6);
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.6s ease 0.4s, transform 0.6s ease 0.4s;
+}
+
+.taglineVisivel {
+
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== LOADING BAR ===== */
+.loadingContainer {
+
+    position: absolute;
+    bottom: 60px;
+    width: 180px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.loadingBar {
+
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #1E50A0, #C9A84C);
+    border-radius: 2px;
+    transition: width 2.8s ease;
+}
+
+.loadingAtivo {
+    
+    width: 100%;
+}

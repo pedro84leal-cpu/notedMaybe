@@ -1,6 +1,19 @@
+.linkVoltar{
+
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: 10px 0 0 10px ;
+}
+
+.iconeVoltar{
+
+    color: rgb(193, 223, 250);
+}
+
 .content{
 
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;

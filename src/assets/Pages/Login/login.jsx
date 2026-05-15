@@ -1,8 +1,9 @@
 import styles from '../Login/login.module.css'
 import { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { supabase } from '../../Config/supabase';
 import logo from '../../Images/titulo_logo.png'
+import { IoReturnDownBack } from "react-icons/io5";
 
 function Login(){
 
@@ -65,7 +66,11 @@ function Login(){
     };
 
     return(
-         <div className={`${styles.content} ${pageLoaded ? styles.fadeIn : ''}`}>
+       <>
+        <Link to='/' className={styles.linkVoltar}>
+            <IoReturnDownBack size={25} className={styles.iconeVoltar} />
+        </Link>
+        <div className={`${styles.content} ${pageLoaded ? styles.fadeIn : ''}`}>
             <div className={styles.logoContent}>
                 <img src={logo} alt='Logo' className={styles.logo} />
             </div>
@@ -90,7 +95,7 @@ function Login(){
                     value={passWord}
                     onChange={(e) => setpassword(e.target.value)}
             />
-            
+
             {erro && <p className={styles.erro}>❌ {erro}</p>}
 
             <button className={styles.btn} onClick={enviar}>
@@ -103,6 +108,7 @@ function Login(){
                 </div>
             )}
         </div>
+    </>
     )
 }
 

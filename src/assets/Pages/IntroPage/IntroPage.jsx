@@ -3,7 +3,7 @@ import logo from '../../Images/logo.png';
 import titulo from '../../Images/titulo.png';
 import "./IntroPage.css";
 
-export default function IntroPage({ onStart, onLogin, onGuest }) {
+export default function IntroPage({ onStart, onLogin }) {
   const [step, setStep] = useState(0);
 
   const [textoSlogan, setTextoSlogan] = useState('');
@@ -75,9 +75,6 @@ export default function IntroPage({ onStart, onLogin, onGuest }) {
           </button>
           <button className="btn-secondary" onClick={onLogin}>
             Já tenho conta
-          </button>
-          <button className="btn-guest" onClick={onGuest}>
-            Entrar como convidado
           </button>
         </div>
 
