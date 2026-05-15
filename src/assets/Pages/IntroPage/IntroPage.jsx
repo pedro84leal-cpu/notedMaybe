@@ -16,7 +16,7 @@ export default function IntroPage({ onStart, onLogin, onGuest }) {
       setTextoSlogan(slogan.slice(0, i));
       i++;
       if (i > slogan.length) clearInterval(interval);
-    }, 50); // velocidade — menos ms = mais rápido
+    }, 50); 
     return () => clearInterval(interval);
   }, [step]); 
 
