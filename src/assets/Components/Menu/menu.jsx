@@ -1,9 +1,6 @@
 import styles from '../Menu/menu.module.css'
 import { NavLink } from 'react-router-dom'
-import { FaCalendarAlt } from "react-icons/fa";
-import { TbHomeFilled } from "react-icons/tb";
-import { FaWallet } from "react-icons/fa";
-import { CgProfile } from "react-icons/cg";
+import { FaCalendarAlt, FaHome } from "react-icons/fa";
 import { IoMdAddCircle } from "react-icons/io";
 import Modal from '../Modal/modal';
 import { useState } from 'react';
@@ -23,29 +20,17 @@ function Menu({ buscarNotas }){
     <>
     <div className={styles.container}>
         <nav className={styles.nav}>
-            <NavLink to='/' className={({ isActive }) => isActive ? styles.linkAtivo : styles.link}>
-               <TbHomeFilled className={styles.icone} />
-            </NavLink>
-
-            <NavLink to='/agenda'  className={({ isActive }) => isActive ? styles.linkAtivo : styles.link}>
-                <FaCalendarAlt className={styles.iconeMidle} />
-            </NavLink>
+            <NavLink to='/home' className={({ isActive }) => isActive ? styles.linkAtivo : styles.link}>
+               <FaHome className={styles.icone} />
+            </NavLink>        
 
             <NavLink className={({ isActive }) => isActive ? styles.linkAtivo : styles.link} onClick={abrirForm}>
                 <IoMdAddCircle className={styles.iconeAdd} />
             </NavLink>
 
-            <NavLink to='/agenda'  className={({ isActive }) => isActive ? styles.linkAtivo : styles.link}>
-                <FaWallet  className={styles.iconeMidle} />
+            <NavLink to='/calendario'  className={({ isActive }) => isActive ? styles.linkAtivo : styles.link}>
+                <FaCalendarAlt className={styles.icone} />
             </NavLink>
-
-         
-            <NavLink to='/agenda'  className={({ isActive }) => isActive ? styles.linkAtivo : styles.link}>
-                <CgProfile className={styles.icone} />
-            </NavLink>
-
-       
-
         </nav>
 
             {FormAberto && (                                   

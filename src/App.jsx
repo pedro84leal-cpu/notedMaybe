@@ -8,6 +8,7 @@ import Login from './assets/Pages/Login/login';
 import Registo from './assets/Pages/Registo/registo'
 import RotaProtegida from './assets/Components/RotaProtegida/RotaProtegida';
 import SplashScreen from './assets/Components/SplashScreen/SplashScreen'
+import Calendario from './assets/Pages/Calendario/calendario';
 
 
 
@@ -64,6 +65,14 @@ function App() {
         
         <Route path='/login' element={<Login /> } />
         <Route path='/registo' element={<Registo />} />
+        <Route path='/calendario' element={
+          <RotaProtegida>
+            <Calendario
+                temaEscuro={temaEscuro}
+                toggleTema={mudaTema}
+            />
+          </RotaProtegida>
+        } />
 
       </Routes>
     </>

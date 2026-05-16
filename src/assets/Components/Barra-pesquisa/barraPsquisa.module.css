@@ -1,3 +1,10 @@
+.content{
+
+    width: 230px;
+    margin: 5px;
+}
+
+
 .input {
         
     width: 100%;
@@ -7,7 +14,7 @@
     background: rgba(96, 95, 95, 0.433);
     color: white;
     font-size: 1rem;
-    outline: none;  
+    outline: none;
 }
 
 .input::placeholder {

@@ -16,15 +16,12 @@ function BotaoLogout(){
 
     return(
         <>
-            <div className={styles.content}>
-                <Link to='/' className={styles.logOut} onClick={logout}>
-                    <SlLogout size={20} />
-                </Link>
-
-            </div>
-
+        <div className={styles.content}>
+            <Link to='/' className={styles.logOut} onClick={logout}>
+                <SlLogout size={20} />
+            </Link>
+        </div>
         </>
-
     )
 }
 

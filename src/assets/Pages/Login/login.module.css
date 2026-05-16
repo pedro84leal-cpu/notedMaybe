@@ -27,7 +27,7 @@
     background: linear-gradient(to bottom, #04656278, #0b16136a, #67d0d270);
     box-shadow: -1px -5px 8px 1px rgba(103, 207, 225, 0.378);
     opacity: 0;
-    transition: opacity 0.8s ease-in;
+    transition: opacity 0.4s ease-in;
 }
 
 .fadeIn {

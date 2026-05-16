@@ -1,0 +1,296 @@
+.page {
+
+    min-height: 100vh;
+    background: var(--page);
+    padding: 20px;
+    transition: background 0.2s;
+    opacity: 0;
+    transition: opacity 0.8s ease-in;
+}
+
+.fadeIn {
+    
+    opacity: 1;
+}
+
+.top1 {
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    white-space: unset;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+/* ===== HEADER ===== */
+.header {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    margin: 5px 0;
+}
+
+.btnVoltar {
+
+    background: transparent;
+    border: 1px solid rgba(27, 144, 144, 0.4);
+    color: #1B9090;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.2s;
+}
+
+.btnVoltar:hover {
+
+    background: rgba(27, 144, 144, 0.1);
+}
+
+.titulo {
+
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color);
+    margin: 0;
+}
+
+/* ===== NAVEGAÇÃO MÊS ===== */
+.navMes {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0 4px;
+}
+
+.mesAno {
+
+    font-size: 18px;
+    font-weight: 600;
+    color: #1B9090;
+    margin: 0;
+}
+
+.btnNav {
+
+    background: rgba(27, 144, 144, 0.1);
+    border: 1px solid rgba(27, 144, 144, 0.3);
+    color: #1B9090;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.btnNav:hover {
+
+    background: rgba(27, 144, 144, 0.2);
+}
+
+/* ===== DIAS DA SEMANA ===== */
+.diasSemana {
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 8px;
+}
+
+.diaSemana {
+
+    text-align: center;
+    font-size: 12px;
+    color: var(--color);
+    font-weight: 500;
+    padding: 4px 0;
+}
+
+/* ===== GRELHA ===== */
+.grelha {
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin-bottom: 24px;
+}
+
+.celula {
+
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.2s;
+    gap: 3px;
+}
+
+.celula:hover:not(.vazia) {
+
+    background: rgba(27, 144, 144, 0.12);
+}
+
+.vazia {
+
+    cursor: default;
+}
+
+.numeroDia {
+
+    font-size: 14px;
+    color: var(--color);
+    font-weight: 400;
+    line-height: 1;
+}
+
+/* Hoje */
+.hoje {
+
+    background: rgba(27, 144, 144, 0.15);
+    border: 1px solid rgba(27, 144, 144, 0.4);
+}
+
+.hoje .numeroDia {
+
+    color: #1B9090;
+    font-weight: 700;
+}
+
+/* Selecionado */
+.selecionado {
+    background: #1B9090 !important;
+}
+
+.selecionado .numeroDia {
+
+    color: var(--color);
+    font-weight: 600;
+}
+
+/* Ponto de nota */
+.ponto {
+
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #E87C1E;
+}
+
+.selecionado .ponto {
+
+    background: var(--color);
+}
+
+/* ===== NOTAS DO DIA ===== */
+.notasDia {
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 20px;
+}
+
+.tituloNotasDia {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1B9090;
+    margin: 0 0 16px 0;
+}
+
+.semNotas {
+
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 14px;
+    text-align: center;
+    padding: 24px 0;
+    margin: 0;
+}
+
+/* ===== CARTÃO DE NOTA ===== */
+.cartaoNota {
+
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 3px solid #1B9090;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 12px;
+}
+
+.cartaoNota.alta {
+
+    border-left-color: #E87C1E;
+}
+
+.cartaoNota.media {
+
+    border-left-color: #F5C842;
+}
+
+
+.cartaoNota.baixa {
+
+    border-left-color: #1B9090;
+}
+
+.notaHeader {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.notaTitulo {
+
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color);
+}
+
+.notaHora {
+
+    font-size: 12px;
+    color: var(--color);
+}
+
+.notaConteudo {
+
+    font-size: 13px;
+    color: var(--color);
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+}
+
+.notaFooter {
+
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.badge {
+
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: rgba(7, 181, 207, 0.08);
+    color: var(--color);
+    text-transform: capitalize;
+}
+
+.badge.alta { background: rgba(119, 28, 6, 0.15); color: #f09707; }
+.badge.media { background: rgba(245, 200, 66, 0.15); color: #F5C842; }
+.badge.baixa { background: rgba(5, 46, 46, 0.15); color: #66b8b8; }
