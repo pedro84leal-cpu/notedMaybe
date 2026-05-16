@@ -42,7 +42,7 @@ Nem sempre precisamos de apps ultra complexas.
 Clone o projeto:
 
 ```bash
-git clone https://github.com/TEU-USERNAME/notedmaybe.git
+git clone https://github.com/pedro84leal-cpu/notedMaybe.git
 ```
 
 Entrar na pasta:
@@ -72,10 +72,11 @@ O projeto está alojado na Vercel.
 🚧 Em desenvolvimento ativo
 
 Novas funcionalidades e melhorias serão adicionadas regularmente.
+- Conexão entre utilizadores
 
 ## 👨‍💻 Autor
 
-Pedro Leal
+Pedro Leal (NexSense)
 
 ---
 
